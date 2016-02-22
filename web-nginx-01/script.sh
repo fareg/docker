@@ -1,4 +1,6 @@
 #!/bin/bash
 
-echo Hello from $0
+echo Executing $0...
+
+nginx -g "daemon off;"
 
