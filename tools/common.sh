@@ -30,3 +30,8 @@ function drun
   if [ ! -f Dockerfile ]; then echo No 'Dockerfile' in this directory; return; fi
   docker run --rm -i -t ${PROJECT_NAME}  $*
 }
+
+function drunbash
+{
+  drun bash
+}
