@@ -1,0 +1,14 @@
+microserv01:
+  image: fcolas/micro-services-nodejs-01
+#  container_name: ms_01
+  volumes:
+    - /home/docker/docker/micro-services-nodejs-01/microserv-ns01:/microserv-ns
+  ports:
+    - "3011:3001"
+
+microserv02:
+  image: fcolas/micro-services-nodejs-02
+  volumes:
+    - /home/docker/docker/micro-services-nodejs-02/microserv-ns02:/microserv-ns
+  ports:
+    - "3012:3002"

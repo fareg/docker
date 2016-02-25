@@ -1,0 +1,9 @@
+# Microservice name
+MS_NAME_NS02=microserv-ns02
+
+# Host listening port
+MS_LOCAL_PORT=3002
+
+# Container listening port
+MS_CONT_PORT=3002
+
