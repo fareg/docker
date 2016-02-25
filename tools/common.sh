@@ -1,37 +1,37 @@
 #
 
-function dreload
+dreload()
 {
   source ../tools/common.sh
 }
 
-function dpsa
+dpsa()
 {
   docker ps -a
 }
 
-function getprojectname
+getprojectname()
 {
   _DIR=`pwd`
   _DIR=`basename $_DIR`
   echo fcolas/$_DIR
 }
 
-function dbuild
+dbuild()
 {
   PROJECT_NAME=`getprojectname`
   if [ ! -f Dockerfile ]; then echo No 'Dockerfile' in this directory; return; fi
   docker build -t ${PROJECT_NAME} .
 }
 
-function drun
+drun()
 {
   PROJECT_NAME=`getprojectname`
   if [ ! -f Dockerfile ]; then echo No 'Dockerfile' in this directory; return; fi
   docker run --rm -i -t ${PROJECT_NAME}  $*
 }
 
-function drunbash
+drunbash()
 {
   drun bash
 }
